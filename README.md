@@ -4,7 +4,7 @@ Bienvenido al curso de Java donde aprenderás desde los fundamentos hasta concep
 
 ---
 
-## 📝 Contenido del Curso
+## 📝 Contenido del Curso.
 
 ### 📚 **Unidades Didácticas - Java Básico**
 1. **¿Qué es Java? ¿Por qué aprender Java?** 🧐
