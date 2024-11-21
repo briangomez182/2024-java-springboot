@@ -1,7 +1,5 @@
 package tipoDeDatosReferencia;
 
-import tipoDeDatosReferencia.interfaces.Coche;
-import tipoDeDatosReferencia.interfaces.CocheHibrido;
 import tipoDeDatosReferencia.persona.Persona;
 
 import java.util.ArrayList;
@@ -24,10 +22,7 @@ public class Referencia {
         frutas.add("Pera");
         System.out.println("Frutas: " + frutas);
 
-        // Interfaz
-        Coche miCoche = new CocheHibrido();
-        miCoche.acelerar();
-        miCoche.frenar();
+        // Interfaz = este tipo de dato lo vamos a ver mas adelante bien detallado.
 
         // Enum
         DiaSemana dia = DiaSemana.SABADO;
