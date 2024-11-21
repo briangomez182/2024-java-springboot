@@ -1,4 +1,4 @@
-package tipoDeDatosReferencia.persona;
+package tiposDeDatosReferencia.persona;
 
 public class Persona {
     public String nombre;

@@ -1,6 +1,6 @@
-package tipoDeDatosReferencia;
+package tiposDeDatosReferencia;
 
-import tipoDeDatosReferencia.persona.Persona;
+import tiposDeDatosReferencia.persona.Persona;
 
 import java.util.ArrayList;
 import java.util.List;
@@ -12,6 +12,7 @@ public class Referencia {
         System.out.println("Mi nombre es: " + nombre);
 
         // Clase personalizada
+        // 1. Crea un nuevo paquete llamado "persona"
         Persona persona = new Persona("Ana", 30);
         System.out.println("Nombre: " + persona.nombre + ", Edad: " + persona.edad);
 
