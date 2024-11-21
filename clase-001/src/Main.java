@@ -12,7 +12,7 @@ public class Main {
         //   MAIN Qué significa?
         //        Es el nombre obligatorio del metodo principal para ejecutar un programa en JAVA. ENTRY POINT
         //   String[] args Qué significa?
-        //        Permite pasar argumentos o parametros desde la línea de comando
+        //        Permite pasar argumentos o parametros desde la línea de comando.
 
         System.out.println("Mi primer mensaje");
         for (String arg : args) {

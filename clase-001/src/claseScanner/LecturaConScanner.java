@@ -7,7 +7,7 @@ public class LecturaConScanner {
     public static void main(String[] args) {
         Scanner scanner = new Scanner(System.in); // Creamos una instancia de Scanner
 
-        System.out.print("Dame tu nombre completo: ");
+        System.out.print("Dame tu nombre completoo: ");
         String nombre = scanner.nextLine(); // Leemos una línea de texto
         System.out.println("Hola, " + nombre);
 
