@@ -5,7 +5,7 @@ mientras se cumpla una condición.
 
 ### 1) Ejemplo práctico Ciclo do-while🎢
 
-Ejecución al menos una vez: El bloque de código dentro de un do-while siempre se ejecuta al menos una vez, 
+Este busca una Ejecución de al menos una vez: El bloque de código dentro de un do-while siempre se ejecuta al menos una vez, 
 ya que la condición se verifica al final del ciclo.
 
 **Cuándo usarlo: Cuando necesitas que un bloque de código se ejecute al menos una vez, independientemente de si
