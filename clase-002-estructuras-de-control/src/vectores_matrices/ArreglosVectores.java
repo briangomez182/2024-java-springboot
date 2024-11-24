@@ -4,10 +4,10 @@ public class ArreglosVectores {
 
     public static void main(String[] args) {
         // Declaración e inicialización de un vector de números enteros
-        int[] numeros = new int[5];
-
+        int[] numeros = new int[5];        // TODO: 24/11/2024 Puede ser de string de boleanos de cualquier tipo. 
+        
         // Asignación de valores a elementos individuales del vector
-        numeros[0] = 10;
+        numeros[0] = 10;        
         numeros[1] = 20;
         numeros[2] = 30;
         numeros[3] = 40;
