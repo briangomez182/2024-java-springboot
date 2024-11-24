@@ -14,6 +14,7 @@ public class For {
         String[] peliculas = {"El Padrino", "Matrix", "Interstellar", "Pulp Fiction"};
 
         // Recorremos el array utilizando un ciclo for"El Señor de los Anillos"
+        //      inicio;     condición;      modificador
         for (int i = 0; i < peliculas.length; i++) {
             System.out.println(peliculas[i]);
         }
