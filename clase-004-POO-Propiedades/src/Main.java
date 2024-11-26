@@ -21,12 +21,12 @@ public class Main {
 
         ferrari.acelerar();
         ferrari.activarTurbo();
-        ferrari.acelerar(); */
+        ferrari.acelerar();*/
 
         // TODO: 24/11/2024 Polimorfismo
 
-        Camion camion = new Camion();
-        camion.acelerar();
+       /* Camion camion = new Camion();
+        camion.acelerar();*/
 
     }
 }
