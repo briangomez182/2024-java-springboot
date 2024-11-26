@@ -15,8 +15,13 @@ public class For {
 
         // Recorremos el array utilizando un ciclo for"El Señor de los Anillos"
         //      inicio;     condición;      modificador
-        for (int i = 0; i < peliculas.length; i++) {
+       /* for (int i = 0; i < peliculas.length; i++) {
             System.out.println(peliculas[i]);
+        }*/
+
+        // TODO: 26/11/2024 Y un foreach itera cada elemento con un nombre de variable dado y cual es el array a iterar
+        for (String pelicula: peliculas) {
+            System.out.println(pelicula);
         }
     }
 }
