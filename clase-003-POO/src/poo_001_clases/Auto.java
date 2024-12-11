@@ -51,5 +51,19 @@ package poo_001_clases;
             // Código para frenar el carro
             return "Frenando";
         }
-    }
+
+    
+    public String acelerarAfondo (){
+        // codigo que ustedes quieren que haga
+        int velocidadMaxima = this.velocidad * 2;
+        this.setVelocidad(velocidadMaxima);
+        return "Usted ahora va a " + velocidadMaxima + " Km/h";
+    };
+
+    public String frenarUnPoco(int frenado){
+        int velocidadFrenado = this.velocidad - frenado;
+        this.setVelocidad(velocidadFrenado);
+        return "Usted bajo la velocidad desde " + this.velocidad + " hasta " + velocidadFrenado + "Km/h";
+    };
+}
 

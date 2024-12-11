@@ -14,5 +14,23 @@ public class Main {
         Auto autoLleno = new Auto("rojo", "fiat", 50);
 
         System.out.println(autoLleno.getMarca());
+
+        // Acelerar el doble de velocidad y un mensaje "Usted ahora va a 500Km/h"
+
+
+
+        // Frenar N cantidad de Km/h y dar el mensaje "Usted bajo la velocidad desde 500km/h hasta 272K0/h"
+        
+
+
+        //Imprimir velodicad que va el auto
+
+
+        System.out.println(autoLleno.acelerarAfondo());
+
+        System.out.println(autoLleno.frenarUnPoco(115));
+
+        System.out.println(autoLleno.getVelocidad());
+
     }
 }

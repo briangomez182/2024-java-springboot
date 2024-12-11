@@ -4,6 +4,9 @@ public class Asignacion {
 
     public static void main(String[] args) {
 
+
+        //NOOOOOO HACERRRRRRR
+
         int a = 10; // Variable inicial
         int b = 5;  // Otra variable para operar
 

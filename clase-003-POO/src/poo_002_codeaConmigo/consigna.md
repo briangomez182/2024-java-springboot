@@ -32,6 +32,11 @@ Define al menos cinco atributos relevantes para un producto:
 
 ---
 
+- ** `calcularIVA` ** :
+  Este método debe devolver el IVA del producto, asumiendo una tasa del 21%.
+- ** `calcularPrecioFinal(boolean)` ** :
+  Este método debe calcular el precio final. Si el cliente está registrado (true), debe aplicar un descuento del 50%. Si no está registrado (false), debe devolver el precio original.
+
 ## 🎯 **Objetivos de la práctica**
 
 - **Dominar la creación de clases en Java**: Practicar la definición de atributos, constructores y métodos.
@@ -47,6 +52,8 @@ Define al menos cinco atributos relevantes para un producto:
 - **Crear un objeto Producto utilizando el constructor por defecto. 💥: No le agregue datos**:
 - **Crear un objeto Producto utilizando el constructor parametrizado**:
 - **Imprimir información del producto utilizando toString**:
+
+
 
 
 💡 ¡Ponte creativo! Usa nombres y categorías que te resulten interesantes para tus productos. 🎨  

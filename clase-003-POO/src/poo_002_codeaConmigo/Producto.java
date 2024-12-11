@@ -52,4 +52,17 @@ public class Producto {
         System.out.println("Stock: " + stock);
         System.out.println("Categoría: " + categoria);
     }
+
+     // Método para calcular el IVA (21% de ejemplo, puedes ajustarlo según tu país)
+     public double calcularIVA() {
+        return this.precio * 0.21;
+    }
+
+    // Método para calcular el precio con descuento si el cliente está registrado
+    public double calcularPrecioFinal(boolean clienteRegistrado) {
+        if (clienteRegistrado) {
+            return this.precio * 0.5; // 50% de descuento
+        }
+        return this.precio;
+    }
 }

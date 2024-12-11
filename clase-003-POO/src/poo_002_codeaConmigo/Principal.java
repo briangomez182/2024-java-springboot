@@ -14,5 +14,12 @@ public class Principal {
 
         // Describir el producto
         producto2.describirProducto();
+
+        Producto producto = new Producto("Laptop", 1000.0, "Laptop de alta gama", 10, "Electrónica");
+
+        System.out.println("Precio original: " + producto.getPrecio());
+        System.out.println("IVA: " + producto.calcularIVA());
+        System.out.println("Precio final (Cliente registrado): " + producto.calcularPrecioFinal(true));
+        System.out.println("Precio final (Cliente no registrado): " + producto.calcularPrecioFinal(false));
     }
 }
