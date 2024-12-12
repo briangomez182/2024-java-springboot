@@ -27,16 +27,20 @@ public class Movie {
     @Column
     private Integer length;
 
+    @Column(name = "genre_id")
+    private Integer genreId;
+
     public Movie() {
     }
 
-    public Movie(Integer id, String title, double miRating, Integer awards, LocalDateTime release_date, Integer length) {
+    public Movie(Integer id, String title, double miRating, Integer awards, LocalDateTime release_date, Integer length, Integer genreId) {
         this.id = id;
         this.title = title;
         this.miRating = miRating;
         this.awards = awards;
         this.release_date = release_date;
         this.length = length;
+        this.genreId = genreId;
     }
 
     public Integer getId() {
@@ -87,6 +91,14 @@ public class Movie {
         this.length = length;
     }
 
+    public Integer getGenreId() {
+        return genreId;
+    }
+
+    public void setGenreId(Integer genreId) {
+        this.genreId = genreId;
+    }
+
     @Override
     public String toString() {
         return "Movie{" +
@@ -96,6 +108,7 @@ public class Movie {
                 ", awards=" + awards +
                 ", release_date=" + release_date +
                 ", length=" + length +
+                ", genreId=" + genreId +
                 '}';
     }
 }
