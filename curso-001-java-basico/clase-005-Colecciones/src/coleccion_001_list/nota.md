@@ -34,7 +34,7 @@ Así es como funciona un ArrayList:
 ## En resumen:
 
 LinkedList es como un tren con vagones que se pueden conectar y desconectar fácilmente. Es bueno para cuando necesitas agregar o quitar cosas en cualquier lugar.
-ArrayList es como un tren con asientos numerados. Es bueno para cuando necesitas encontrar algo rápido, pero agregar o quitar cosas en el medio puede ser más lento.
+ArrayList es como un tren con vagones enumerados. Es bueno para cuando necesitas encontrar algo rápido, pero agregar o quitar cosas en el medio puede ser más lento.
 ¿Cuándo usar cada uno?
 
 LinkedList: Cuando necesitas una lista donde puedas agregar y quitar elementos fácilmente, sin importar dónde estén.
