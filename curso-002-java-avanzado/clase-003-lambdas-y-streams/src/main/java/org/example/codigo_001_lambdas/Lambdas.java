@@ -43,7 +43,7 @@ public class Lambdas {
         int valor = numeros.stream()
                 .max((a, b) -> Integer.compare(a, b))
                 .orElse(0);
-        System.out.println("Valor Min: " + valor);
+        System.out.println("Valor Max: " + valor);
     }
 
     public void encontrarMinimo() {

@@ -1,6 +1,7 @@
 package org.example;
 
 import org.example.codigo_001_lambdas.Lambdas;
+import org.example.codigo_002_metodoReferencia.Referencia;
 
 import java.util.ArrayList;
 import java.util.LinkedList;
@@ -18,7 +19,7 @@ public class Main {
         List<Integer> listaNumeros = Arrays.asList(1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 16, 22,22,22);
 
         // Crear una instancia de LambdasClaseEjemplo,
-        Lambdas misLambdas = new Lambdas(listaNumeros);
+        Referencia misLambdas = new Referencia(listaNumeros);
 
       // misLambdas.imprimirElementos();        // Imprime todos los elementos
 
@@ -26,19 +27,19 @@ public class Main {
 
       //  misLambdas.elevarAlCuadrado();         // Eleva los números al cuadrado
 
-       //  misLambdas.sumarElementos();            // Suma todos los elementos
+      //   misLambdas.sumarElementos();            // Suma todos los elementos
 
       //  misLambdas.encontrarMaximo();           // Encuentra el número máximo
 
-      //  misLambdas.encontrarMinimo();           // Encuentra el número mínimo
+        misLambdas.encontrarMinimo();           // Encuentra el número mínimo
 
       //  misLambdas.contarMayoresQueCinco();     // Cuenta los números mayores que 5
 
       //  misLambdas.ordenarDescendente();        // Ordena la lista en orden descendente
 
-        misLambdas.eliminarDuplicados();        // Elimina los números duplicados
+     //   misLambdas.eliminarDuplicados();// Elimina los números duplicados
 
-        misLambdas.saltarPrimerosCinco();       // Salta los primeros 5 elementos*/
+      //  misLambdas.saltarPrimerosCinco();       // Salta los primeros 5 elementos*/
 
     }
 }
