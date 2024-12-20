@@ -10,8 +10,8 @@ public class MetodosEstadisticos {
         List<String> nombres = Arrays.asList("Alicia", "Brian", "carlos", "David", "Alicia", "Ever");
 
         // count: Cuenta el número de elementos en el Stream
-        long count = nombres.stream().count(); // Cuenta el total de elementos
-        System.out.println("Cantidad: " + count);
+        long contador = nombres.stream().count(); // Cuenta el total de elementos
+        System.out.println("Cantidad: " + contador);
 
         // average: Calcula el promedio de la longitud de los nombres
         double promedioLongitud = nombres.stream()
