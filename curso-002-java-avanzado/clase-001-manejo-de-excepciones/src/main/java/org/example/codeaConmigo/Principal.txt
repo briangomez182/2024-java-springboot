@@ -1,0 +1,78 @@
+// Clase personalizada de excepción
+class InvalidSalaryException extends Exception {
+    public InvalidSalaryException(String message) {
+        super(message);
+    }
+}
+
+// Clase Empleado
+class Empleado {
+    private String nombre;
+    private String apellido;
+    private double salario;
+
+    public Empleado(String nombre, String apellido, double salario) {
+        this.nombre = nombre;
+        this.apellido = apellido;
+        this.salario = salario;
+    }
+
+    @Override
+    public String toString() {
+        return "Empleado{" +
+                "nombre='" + nombre + '\'' +
+                ", apellido='" + apellido + '\'' +
+                ", salario=" + salario +
+                '}';
+    }
+}
+
+// Clase principal
+import java.util.ArrayList;
+import java.util.List;
+import java.util.Scanner;
+
+public class Main {
+    private static List<Empleado> empleados = new ArrayList<>();
+
+    public static void main(String[] args) {
+        Scanner scanner = new Scanner(System.in);
+
+        while (true) {
+            System.out.println("\nIngrese los datos del empleado (o escriba 'salir' para terminar):");
+            System.out.print("Nombre: ");
+            String nombre = scanner.nextLine();
+            if (nombre.equalsIgnoreCase("salir")) break;
+
+            System.out.print("Apellido: ");
+            String apellido = scanner.nextLine();
+
+            System.out.print("Salario: ");
+            double salario = scanner.nextDouble();
+            scanner.nextLine(); // Consumir el salto de línea
+
+            try {
+                addEmployee(nombre, apellido, salario);
+                System.out.println("Empleado agregado con éxito.");
+            } catch (InvalidSalaryException e) {
+                System.out.println("Error al agregar empleado: " + e.getMessage());
+            } finally {
+                System.out.println("Operación finalizada.");
+            }
+        }
+
+        System.out.println("\nLista de empleados:");
+        for (Empleado empleado : empleados) {
+            System.out.println(empleado);
+        }
+
+        scanner.close()
+    }
+
+    public static void addEmployee(String nombre, String apellido, double salario) throws InvalidSalaryException {
+        if (salario < 0 || salario > 100000) {
+            throw new InvalidSalaryException("El salario debe estar entre 0 y 100,000.");
+        }
+        empleados.add(new Empleado(nombre, apellido, salario));
+    }
+}

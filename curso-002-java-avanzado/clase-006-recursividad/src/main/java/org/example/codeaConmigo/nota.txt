@@ -1,0 +1,22 @@
+Crea un programa en Java que incluya una entidad llamada Auto con los siguientes atributos:
+
+id (int): Identificador único del auto.
+marca (String): Marca del auto.
+modelo (String): Modelo del auto.
+kilometraje (int): Kilómetros recorridos.
+Tu tarea es:
+
+Implementar la entidad Auto con los atributos mencionados y su constructor.
+Crear una lista de autos en el programa principal.
+Implementar dos métodos recursivos:
+Calcular el kilometraje total: Recorrer recursivamente la lista de autos para sumar el kilometraje de todos los autos.
+Buscar un auto por marca: Recorrer la lista recursivamente para encontrar el primer auto que coincida con la marca buscada.
+Finalmente, muestra en la consola:
+
+El kilometraje total de todos los autos.
+Los detalles del auto encontrado o un mensaje indicando que no se encontró.
+
+Nota:
+calcularKilometrajeTotal: Recorre la lista recursivamente, sumando el kilometraje de cada auto hasta llegar al final.
+buscarAutoPorMarca: Recorre la lista recursivamente buscando un auto que coincida con la marca.
+Ambos métodos terminan cuando se alcanza el caso base, evitando bucles explícitos.
