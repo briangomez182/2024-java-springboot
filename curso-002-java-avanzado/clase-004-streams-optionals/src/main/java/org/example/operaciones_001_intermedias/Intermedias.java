@@ -21,6 +21,8 @@ public class Intermedias {
                 .collect(Collectors.toList());
         System.out.println("map: " + nameLengths);
 
+        
+
         // flatMap: Descompone estructuras complejas en un único Stream
         List<List<String>> nestedList = Arrays.asList(
                 Arrays.asList("A", "B"),

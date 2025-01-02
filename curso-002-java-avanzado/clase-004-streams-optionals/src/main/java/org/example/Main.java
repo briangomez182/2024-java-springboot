@@ -6,7 +6,7 @@ import java.util.stream.Collectors;
 
 public class Main {
     public static void main(String[] args) {
-        List<String> names = Arrays.asList("John", "Jane", "Jack", "Jill", "John", "Jake");
+        List<String> names = Arrays.asList("John", "Jane", "Jack", "Bill", "John", "Drake");
 
         // filter: Filtra elementos que cumplen una condición
         List<String> filteredNames = names.stream()
