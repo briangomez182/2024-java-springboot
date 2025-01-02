@@ -219,15 +219,11 @@ public class PersonaServlet extends HttpServlet {
 
 ---
 
-## 6️⃣ 
-
----
-
-## 7️⃣ Levanta la App con el Tomcat 🖥️
+## 6️⃣ Levanta la App con el Tomcat 🖥️
 ---
 1. Ir a Run y ejecutar.
 
-2. Abre la página [http://localhost:8080/app/test](http://localhost:8080/app/test).
+2. Abre la página [http://localhost:8080/app/persona](http://localhost:8080/app/persona).
 
 Has creado una página web básica con un Servlet, JSP y Tomcat. ¡Felicidades! 🎉
 
