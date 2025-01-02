@@ -16,6 +16,7 @@ public class Producto {
     @Column(nullable = false)
     private BigDecimal precio;
 
+    /*No crear en la 1ra DEMO*/
     @ManyToMany(mappedBy = "productos")
     private Set<Persona> personas;
 

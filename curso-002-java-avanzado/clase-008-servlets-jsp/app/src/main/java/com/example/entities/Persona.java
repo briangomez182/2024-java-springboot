@@ -15,9 +15,11 @@ public class Persona {
     @Column(nullable = false)
     private String apellido;
 
+    /*No crear en la 1ra DEMO*/
     @OneToMany(mappedBy = "persona", cascade = CascadeType.ALL, orphanRemoval = true, fetch = FetchType.EAGER)
     private Set<Tarjeta> tarjetas;
 
+    /*No crear en la 1ra DEMO*/
     @ManyToMany(fetch = FetchType.EAGER)
     @JoinTable(
             name = "persona_productos",

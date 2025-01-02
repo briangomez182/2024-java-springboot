@@ -200,12 +200,15 @@ public class PersonaServlet extends HttpServlet {
     <h1>Persona listado</h1> 
 
     <ul>
-        <%  List<Persona> listado = (List<Persona>) request.getAttribute("listado");
+         <%  List<Persona> listado = (List<Persona>) request.getAttribute("listado");
             
-            for( int i = 0; index < listado.size(); i++ ) { %>             
-                <li>Cliente: <%= listado.get(i).getNombre() %> <%= listado.get(i).getApellido()%> -     
-                Tarjeta :  <%= listado.get(i).getTarjetas().stream().findFirst().get().getTipo() %></li>
-            <% } %>
+            for( Persona persona: listado ) { %>
+
+            <li>Cliente: <%= persona.getNombre() %> -
+                Apellido: <%= persona.getApellido()%> - 
+                Tarjeta :  <%= persona.getTarjetas().stream().findFirst().get().getTipo() %>
+            </li>
+        <% } %>
     </ul>
 
 
@@ -216,20 +219,7 @@ public class PersonaServlet extends HttpServlet {
 
 ---
 
-## 6️⃣ Configurar `web.xml` 📄
-1. Ir el archivo `web.xml` en `src/main/webapp/WEB-INF/`.
-2. Configura el descriptor de despliegue:
-
-```xml
-<!DOCTYPE web-app PUBLIC
- "-//Sun Microsystems, Inc.//DTD Web Application 2.3//EN"
- "http://java.sun.com/dtd/web-app_2_3.dtd" >
-
-<web-app>
-  <display-name>Archetype Created Web Application</display-name>
-  
-</web-app>
-```
+## 6️⃣ 
 
 ---
 

@@ -22,13 +22,14 @@
     <p>Mensaje: <%= request.getAttribute("nombre") %></p>
 
     <ul>
-        <%  List<Persona> listado = (List<Persona>) request.getAttribute("listado");
-            
-            for( int index = 0; index < listado.size(); index++ ) { %>
+         <%  List<Persona> listado = (List<Persona>) request.getAttribute("listado");
 
-                
-        
-            <li>Cliente: <%= listado.get(index).getNombre() %> <%= listado.get(index).getApellido()%> - Tarjeta :  <%= listado.get(index).getTarjetas().stream().findFirst().get().getTipo() %></li>
+            for( Persona persona: listado ) { %>
+
+            <li>Cliente: <%= persona.getNombre() %> -
+                Apellido: <%= persona.getApellido()%> -
+                <%-- Tarjeta :  <%= persona.getTarjetas().stream().findFirst().get().getTipo() %> --%>
+            </li>
         <% } %>
     </ul>
 
