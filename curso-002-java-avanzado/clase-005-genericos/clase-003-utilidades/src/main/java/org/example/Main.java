@@ -32,8 +32,11 @@ public class Main {
             }*/
 
         // Pattern y Matcher
+        //esta línea crea un patrón que busca una o más apariciones de dígitos (números del 0 al 9).
         Pattern patron = Pattern.compile("[0-9]+");
-        Matcher matcher = patron.matcher("6479");
+        //esta línea crea un objeto que intentará encontrar el patrón dentro de la cadena "456".
+        Matcher matcher = patron.matcher("456");
+        //esta linea busca en el objeto macher si hay coincidencias con el valor ingresado, devuelve un booleano
         boolean esNumero = matcher.matches();
         System.out.println("Es un número: " + esNumero);
     }
