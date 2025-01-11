@@ -37,6 +37,11 @@ public class Movie {
         return calcularPromedioRating(listaMovies, indice + 1, suma + listaMovies.get(indice).getRating());
     }
 
+
+
+
+
+
     // Método recursivo para buscar una película por título
     public static Movie buscarPeliculaPorTitulo(List<Movie> listaMovies, int index, String tituloBuscado) {
         if (index == listaMovies.size()) { // Caso base: no encontramos la película
@@ -49,14 +54,23 @@ public class Movie {
         return buscarPeliculaPorTitulo(listaMovies, index + 1, tituloBuscado);
     }
 
+
+
+
+
+    
+
     public static Movie buscarPeliculaPorTituloFor(List<Movie> listaMovie, String tituloBuscado) {
-        for (Movie movie: listaMovie) if (movie.getTitle().equalsIgnoreCase(tituloBuscado)) return movie;
+        for (Movie movie: listaMovie) 
+            if (movie.getTitle().equalsIgnoreCase(tituloBuscado)) 
+                return movie;
         return null;
     }
 
     public static Movie buscarPeliculaPorTituloStream(List<Movie> listaMovie, String tituloBuscado) {
         Optional<Movie> peliculaEncontrada = listaMovie.stream().filter(movie -> movie.getTitle().equalsIgnoreCase(tituloBuscado)).findFirst();
-        if (peliculaEncontrada.isPresent()) return peliculaEncontrada.get();
+        if (peliculaEncontrada.isPresent()) 
+            return peliculaEncontrada.get();
         return null;
 
     }
