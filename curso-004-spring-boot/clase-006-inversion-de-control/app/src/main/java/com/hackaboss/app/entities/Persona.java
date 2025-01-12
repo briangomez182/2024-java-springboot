@@ -6,7 +6,7 @@ import lombok.*;
 @Setter
 @NoArgsConstructor
 @AllArgsConstructor
-public class Usuario {
+public class Persona {
 
     /*esta entidad se crear para conectar con la DB con el @Entity y los @columns*/
     private Long id;
