@@ -16,9 +16,9 @@ public class AppApplication {
 	@Bean
 	public OpenAPI customOpenAPI() {
 		return new OpenAPI().info(new Info()
-				.title("API probando documentación 111")
-				.version("0.0.2")
-				.description("Un ejemplo de cómo documentar una API 333"));
+				.title("Titulo principal de mi API")
+				.version("1.1.2")
+				.description("Una descripcion corta de cómo esta documentada mi API"));
 	}
 
 
