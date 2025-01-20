@@ -13,11 +13,13 @@ Este documento describe los pasos necesarios para implementar Spring Security en
 
 2. Descarga el proyecto generado y ábrelo en tu IDE favorito.
 
+3. Chequea que tengas `spring-boot-starter-security` como dependencia.
+
 ---
 
 ## Paso 2: Crear controladores
 
-Crea un controlador con dos endpoints: uno protegido por seguridad y otro accesible sin autenticación.
+Crea un paquete controllers y agrega un controllador llamado `HolaController` con dos endpoints: uno protegido por seguridad y otro accesible sin autenticación.
 
 ```java
 package com.ejercicios.springSecurity.controller;
@@ -64,14 +66,14 @@ public class SecurityConfig {
     @Bean
     public SecurityFilterChain filterChain(HttpSecurity httpSecurity) throws Exception {
         return httpSecurity
-            .authorizeHttpRequests()
-                .requestMatchers("/pruebasecurity/holanoseg").permitAll()
-                .anyRequest().authenticated()
-            .and()
-            .formLogin().permitAll()
-            .and()
-            .build();
+                .authorizeHttpRequests(authorize -> authorize
+                        .requestMatchers("/pruebasecurity/holanoseg").permitAll()
+                        .anyRequest().authenticated()
+                )
+                .formLogin(form -> form.permitAll())
+                .build();
     }
+
 }
 ```
 
