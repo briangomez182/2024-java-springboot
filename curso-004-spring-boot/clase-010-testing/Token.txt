@@ -1,0 +1,8 @@
+Analyze "MiProyecto": sqp_f7991a3a259075c2f6eda5e6a675ada16d81b01f
+
+
+mvn clean verify sonar:sonar 
+  -Dsonar.projectKey=MiProyecto 
+  -Dsonar.projectName='MiProyecto' 
+  -Dsonar.host.url=http://localhost:9000 
+  -Dsonar.token=sqp_f7991a3a259075c2f6eda5e6a675ada16d81b01f
