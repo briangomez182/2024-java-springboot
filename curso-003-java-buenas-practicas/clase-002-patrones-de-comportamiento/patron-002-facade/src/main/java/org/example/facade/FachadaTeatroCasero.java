@@ -3,13 +3,14 @@ package org.example.facade;
 import org.example.entitites.Luces;
 import org.example.entitites.Sonido;
 import org.example.entitites.Tv;
+import org.example.interfaces.Dispositivo;
 
 public class FachadaTeatroCasero {
-    private Tv tv;
-    private Sonido sonido;
-    private Luces luces;
+    private Dispositivo  tv;
+    private Dispositivo sonido;
+    private Dispositivo  luces;
 
-    public FachadaTeatroCasero(Tv tv, Sonido sonido, Luces luces) {
+    public FachadaTeatroCasero(Dispositivo  tv, Dispositivo  sonido, Dispositivo  luces) {
         this.tv = tv;
         this.sonido = sonido;
         this.luces = luces;
