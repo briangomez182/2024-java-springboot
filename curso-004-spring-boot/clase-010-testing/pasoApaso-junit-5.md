@@ -1,15 +1,30 @@
 # Guía para Implementar JUnit 5 🧪
 
+### Pasos Previos: Crea tus servicios y respositorios con interfaces  🛠️
+1. **Crea tus servicios y respositorios:** con datos de pruebas para probar tu API:
+
+
 ### Paso 1: Configuración del Proyecto 🛠️
 1. **Dependencias:** Asegúrate de que tu archivo `pom.xml` contenga la siguiente dependencia:
+
    ```xml
-   <dependency>
-       <groupId>org.springframework.boot</groupId>
-       <artifactId>spring-boot-starter-test</artifactId>
-       <scope>test</scope>
-   </dependency>
+      <dependency>
+         <groupId>org.junit.jupiter</groupId>
+         <artifactId>junit-jupiter-api</artifactId>
+         <scope>test</scope>
+      </dependency>
+      <dependency>
+            <groupId>org.mockito</groupId>
+            <artifactId>mockito-core</artifactId>
+            <scope>test</scope>
+      </dependency>
+      <dependency>
+            <groupId>org.mockito</groupId>
+            <artifactId>mockito-junit-jupiter</artifactId>
+            <scope>test</scope>
+      </dependency>
    ```
-   Esto incluye automáticamente JUnit 5.
+   Esto incluye automáticamente JUnit 5 Jupiter y Mockito para simular el repositorio.
 
 2. **Estructura del Proyecto:**
    - Asegúrate de tener un paquete separado para los tests (por ejemplo: `src/test/java`). 📂
@@ -18,23 +33,39 @@
 
 ### Paso 2: Crear y Ejecutar Pruebas Unitarias 📋
 1. **Crear Clase de Pruebas:**
-   - Crea una clase llamada `CalculadoraTest` en el paquete de pruebas.
+   - Crea una clase llamada `ProductoServiceTest` en el paquete de pruebas.
 2. **Escribir Test:**
    ```java
    import org.junit.jupiter.api.Test;
    import static org.junit.jupiter.api.Assertions.assertEquals;
 
-   public class CalculadoraTest {
-       @Test
-       public void testCalcularSuma() {
-           Calculadora calculadora = new Calculadora();
-           Double resultado = calculadora.calcularSuma(3, 5);
-           assertEquals(8.0, resultado); // Verifica que la suma sea correcta
-       }
+   @ExtendWith(MockitoExtension.class)
+   public class ProductoServiceTes {
+
+      @InjectMocks // Inyecta el mock en el servicio
+      private ProductoService productoService;
+
+      @Mock // Simula el ProductoRepository
+      private ProductoRepository productoRepository;
+
+      @Test
+      public void findAllTest() {
+         
+      }
+
+      @Test
+      public void findOneTest() {
+         
+      }
+
+      @Test
+      public void findOneNullTest() {
+         
+      }
    }
    ```
 3. **Ejecución:**
-   - Haz clic derecho sobre la clase de prueba y selecciona "Run CalculadoraTest". ▶️
+   - Haz clic derecho sobre la clase de prueba llamada `ProductoServiceTest` y selecciona "Run ProductoServiceTest". ▶️
 
 ---
 

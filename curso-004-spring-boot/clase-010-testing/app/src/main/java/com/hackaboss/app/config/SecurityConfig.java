@@ -15,6 +15,8 @@ public class SecurityConfig {
         return httpSecurity
                 .authorizeHttpRequests(authorize -> authorize
                         .requestMatchers("/pruebasecurity/holanoseg").permitAll()
+                        .requestMatchers("/producto/").permitAll()
+                        .requestMatchers("/producto/id/{id}").permitAll()
                         .anyRequest().authenticated()
                 )
                 .formLogin(form -> form.permitAll())
