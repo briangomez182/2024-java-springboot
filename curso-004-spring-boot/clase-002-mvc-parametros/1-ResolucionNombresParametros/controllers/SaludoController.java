@@ -32,12 +32,12 @@ public class SaludoController {
         return "Hola Mundo " + nombre + " tienes " + edad + " años y eres " + profesion;
     }
 
-    //http://localhost:8080/saludarConLombok/brian
-    @GetMapping("/saludarConLombok/{nombre}")
-    public RespuestaUsuario saludarConLombok(@PathVariable String nombre) {
+    //http://localhost:8080/saludarConJSON/brian
+    @GetMapping("/saludarConJSON/{nombre}")
+    public RespuestaUsuario saludarConJSON(@PathVariable String nombre) {
         RespuestaUsuario res = new RespuestaUsuario();
         res.setParametroRecibido(nombre);
-        res.setParametroEnviado("Saludos "  + nombre + ", esta respuesta con lombok ");
+        res.setParametroEnviado("Saludos "  + nombre + ", esta respuesta con JSON ");
         res.setStatus("Perfecto");
         return res;
     }

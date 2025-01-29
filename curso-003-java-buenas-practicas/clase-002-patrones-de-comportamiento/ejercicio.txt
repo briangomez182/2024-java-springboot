@@ -1,0 +1,42 @@
+
+### Escenario N 1: **Sistema de control de versiones**
+
+_Estás diseñando un sistema de control de versiones para un equipo de desarrollo de software. El sistema debe gestionar la colaboración en el código fuente, rastrear cambios, y permitir la fusión de ramas. Además, debe notificar a los desarrolladores cuando hay conflictos y facilitar la revisión de código._
+
+¿Qué patrón/es de diseño elegirías? ¿Por qué?
+
+#### Resolución
+
+- **Patrón/es de Diseño Sugerido/s:**
+    
+- **Justificación:** 
+
+---
+
+### Escenario Nº 2: **Sistema de construcción de casas**
+
+_Estás trabajando en un sistema para una empresa constructora que construye casas personalizadas. Cada cliente puede elegir entre diferentes diseños, materiales de construcción y opciones de personalización. El sistema debe ser capaz de manejar la construcción de múltiples casas simultáneamente, con diferentes equipos de construcción trabajando en diferentes proyectos._
+
+¿Qué patrón/es de diseño elegirías? ¿Por qué?
+
+#### Resolución
+
+- **Patrón/es de Diseño Sugerido/s:** 
+    
+- **Justificación:** 
+    
+
+---
+
+### Escenario Nº 3: **Sistema de gestión de tareas en un Proyecto de desarrollo de software**
+
+_Estás diseñando un sistema de gestión de tareas para un equipo de desarrollo de software. Cada tarea puede tener diferentes estados (por ejemplo, pendiente, en progreso, completada) y asignaciones a miembros del equipo. Además, algunas tareas pueden depender de otras, y el sistema debe permitir la asignación de prioridades._
+
+¿Qué patrón/es de diseño elegirías? ¿Por qué?
+
+#### Resolución
+
+- **Patrón/es de Diseño Sugerido/s:** 
+    
+- **Justificación:** 
+
