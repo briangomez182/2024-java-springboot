@@ -11,10 +11,22 @@ import java.util.List;
 @RequestMapping("/alumnos")
 public class AlumnoController {
 
-    AlumnoService alumnosService = new AlumnoService();
-    @GetMapping({"/", ""}) //si el usuario escribe al final de persona la / o no
-    public List<Alumno> obtenerTodosLosAlumnos() {
-        return alumnosService.obtenerTodosLosAlumnos();
+    AlumnoServiceInterfaz alumnoServiceInterfaz;
+
+    public AlumnoController(AlumnoServiceInterfaz alumnoServiceInterfaz) {
+        this.alumnoServiceInterfaz = alumnoServiceInterfaz;
+    }
+
+    @GetMapping({"/",""})
+    public ResponseEntity obtenerTodosLosAlumnos(){
+        List<Alumno> listado = alumnoServiceInterfaz.obtenerTodosLosAlumnos();
+        return ResponseEntity.status(200).body(listado);
+    }
+
+    @PostMapping("/agregar")
+    public ResponseEntity agreagarAlumnos(@RequestBody Alumno alumno){
+        alumnoServiceInterfaz.crearAlumno(alumno);
+        return ResponseEntity.status(200).body("Guardado con exito");
     }
     
 }

@@ -1,6 +1,7 @@
 package com.hackaboss.app.services;
 
 import com.hackaboss.app.dtos.PersonaDTO;
+import com.hackaboss.app.entities.Persona;
 
 import java.util.List;
 
@@ -15,5 +16,10 @@ public interface PersonaServicioInterfaz {
 
     PersonaDTO actualizar(Long id, PersonaDTO entidad);
 
-    void eliminar(Long id);
+    List<PersonaDTO> eliminar(Long id);
+
+    //Conversores
+    PersonaDTO convertirPersonaHaciaDTO(Persona persona);
+
+    Persona convertirDTOHaciaPersona(PersonaDTO personaDTO);
 }

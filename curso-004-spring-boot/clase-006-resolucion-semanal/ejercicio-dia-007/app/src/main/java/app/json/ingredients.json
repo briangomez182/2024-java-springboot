@@ -1,0 +1,152 @@
+[
+    {
+        "id": 1,
+        "nombre": "Cebolla",
+        "cantidadCalorias": 47
+    },
+    {
+        "id": 2,
+        "nombre": "Ajo",
+        "cantidadCalorias": 169
+    },
+    {
+        "id": 3,
+        "nombre": "Pimiento",
+        "cantidadCalorias": 22
+    },
+    {
+        "id": 4,
+        "nombre": "Tomate",
+        "cantidadCalorias": 22
+    },
+    {
+        "id": 5,
+        "nombre": "Pollo",
+        "cantidadCalorias": 165
+    },
+    {
+        "id": 6,
+        "nombre": "Carne de res",
+        "cantidadCalorias": 250
+    },
+    {
+        "id": 7,
+        "nombre": "Pasta",
+        "cantidadCalorias": 131
+    },
+    {
+        "id": 8,
+        "nombre": "Arroz",
+        "cantidadCalorias": 130
+    },
+    {
+        "id": 9,
+        "nombre": "Aceite de oliva",
+        "cantidadCalorias": 900
+    },
+    {
+        "id": 10,
+        "nombre": "Mantequilla",
+        "cantidadCalorias": 752
+    },
+    {
+        "id": 11,
+        "nombre": "Huevo",
+        "cantidadCalorias": 70
+    },
+    {
+        "id": 12,
+        "nombre": "Leche",
+        "cantidadCalorias": 42
+    },
+    {
+        "id": 13,
+        "nombre": "Queso",
+        "cantidadCalorias": 402
+    },
+    {
+        "id": 14,
+        "nombre": "Harina",
+        "cantidadCalorias": 364
+    },
+    {
+        "id": 15,
+        "nombre": "Lechuga",
+        "cantidadCalorias": 15
+    },
+    {
+        "id": 16,
+        "nombre": "Espinaca",
+        "cantidadCalorias": 23
+    },
+    {
+        "id": 17,
+        "nombre": "Zanahoria",
+        "cantidadCalorias": 41
+    },
+    {
+        "id": 18,
+        "nombre": "Patata",
+        "cantidadCalorias": 77
+    },
+    {
+        "id": 19,
+        "nombre": "Maíz",
+        "cantidadCalorias": 86
+    },
+    {
+        "id": 20,
+        "nombre": "Cilantro",
+        "cantidadCalorias": 23
+    },
+    {
+        "id": 21,
+        "nombre": "Perejil",
+        "cantidadCalorias": 47
+    },
+    {
+        "id": 22,
+        "nombre": "Albahaca",
+        "cantidadCalorias": 22
+    },
+    {
+        "id": 23,
+        "nombre": "Orégano",
+        "cantidadCalorias": 306
+    },
+    {
+        "id": 24,
+        "nombre": "Canela",
+        "cantidadCalorias": 261
+    },
+    {
+        "id": 25,
+        "nombre": "Pimienta",
+        "cantidadCalorias": 251
+    },
+    {
+        "id": 26,
+        "nombre": "Sal",
+        "cantidadCalorias": 0
+    },
+    {
+        "id": 27,
+        "nombre": "Azúcar",
+        "cantidadCalorias": 387
+    },
+    {
+        "id": 28,
+        "nombre": "Vinagre",
+        "cantidadCalorias": 18
+    },
+    {
+        "id": 29,
+        "nombre": "Salsa de soja",
+        "cantidadCalorias": 61
+    },
+    {
+        "id": 30,
+        "nombre": "Limón",
+        "cantidadCalorias": 29
+    }
+]

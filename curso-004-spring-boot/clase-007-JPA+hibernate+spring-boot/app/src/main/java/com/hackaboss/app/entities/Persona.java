@@ -1,4 +1,4 @@
-package com.hackaboss.app.models;
+package com.hackaboss.app.entities;
 
 import jakarta.persistence.Entity;
 import jakarta.persistence.GeneratedValue;
@@ -15,7 +15,7 @@ public class Persona {
 
     /*esta entidad se crear para conectar con la DB con el @Entity y los @columns*/
     @Id
-    @GeneratedValue(strategy = GenerationType.SEQUENCE)
+    @GeneratedValue(strategy = GenerationType.IDENTITY)
     private Long id;
     private String nombre;
     private String apellido;

@@ -1,15 +1,14 @@
 package com.hackaboss.app.services;
 
 import com.hackaboss.app.dtos.PersonaDTO;
-import com.hackaboss.app.models.Persona;
+import com.hackaboss.app.entities.Persona;
 import com.hackaboss.app.respositories.PersonaRepositorioInterfaz;
-import com.hackaboss.app.utilities.PersonaUtil;
+
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
 import java.util.List;
 import java.util.Optional;
-import java.util.stream.Collectors;
 
 @Service
 public class PersonaServicio implements PersonaServicioInterfaz {
@@ -21,24 +20,24 @@ public class PersonaServicio implements PersonaServicioInterfaz {
     public List<PersonaDTO> buscarTodos() {
         List<Persona> personas = repository.findAll();
         return personas.stream()
-                .map(PersonaUtil::convertirPersonaAPersonaDTO)
-                .collect(Collectors.toList());
+                .map(this::convertirPersonaHaciaDTO)
+                .toList();
     }
 
     @Override
     public PersonaDTO buscarPorId(Long id) {
         Optional<Persona> persona = repository.findById(id);
 
-        return persona.map(PersonaUtil::convertirPersonaAPersonaDTO)
+        return persona.map(this::convertirPersonaHaciaDTO)
                 .orElse(new PersonaDTO(null,null,null,null));
     }
 
     @Override
     public PersonaDTO crear(PersonaDTO entidad) {
         //transoformar en un obj persona para ser guardada
-        Persona personaRecuperada = PersonaUtil.convertirPersonaDTOAPersona(entidad);
+        Persona personaRecuperada = this.convertirDTOHaciaPersona(entidad);
         Persona personaGuardada = repository.save(personaRecuperada);
-        return PersonaUtil.convertirPersonaAPersonaDTO(personaGuardada);
+        return this.convertirPersonaHaciaDTO(personaGuardada);
     }
 
     @Override
@@ -57,7 +56,7 @@ public class PersonaServicio implements PersonaServicioInterfaz {
             Persona personaActualizada = repository.save(persona);
 
             // Devuelve el DTO actualizado
-            return PersonaUtil.convertirPersonaAPersonaDTO(personaActualizada);
+            return this.convertirPersonaHaciaDTO(personaActualizada);
         } else {
             throw new RuntimeException("Persona no encontrada con id: " + id);
         }
@@ -65,7 +64,23 @@ public class PersonaServicio implements PersonaServicioInterfaz {
 
 
     @Override
-    public void eliminar(Long id) {
-        repository.deleteById(id);
+    public  List<PersonaDTO> eliminar(Long id) {
+        try {
+            repository.deleteById(id);
+        }catch (Exception e){
+            throw new RuntimeException("Persona con el id: " + id  + " no eliminada" );
+        }
+
+        return this.buscarTodos();
+    }
+
+    @Override
+    public PersonaDTO convertirPersonaHaciaDTO(Persona persona) {
+        return new PersonaDTO(persona.getId(), persona.getNombre(), persona.getApellido(), persona.getEdad());
+    }
+
+    @Override
+    public Persona convertirDTOHaciaPersona(PersonaDTO personaDTO) {
+        return new Persona(personaDTO.getIdentificador(), personaDTO.getNombre(), personaDTO.getApellido(), personaDTO.getEdad());
     }
 }

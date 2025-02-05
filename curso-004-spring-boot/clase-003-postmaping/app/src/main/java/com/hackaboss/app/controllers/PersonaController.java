@@ -34,8 +34,13 @@ public class PersonaController {
     }
 
     @PostMapping("/new")
-    public String crearPersona2(@RequestBody Persona persona) {
-        return "ASasASasASasa";
+    public ResponseEntity crearPersona2(@RequestBody Persona persona) {
+        HttpHeaders headers = new HttpHeaders();
+        headers.add("Custom-Header", "ValorPersonalizado");
+
+        return ResponseEntity.status(HttpStatus.ACCEPTED)
+                             .headers(headers)
+                             .body("Este es un mensaje con headers personalizados.");
     }
 
 
