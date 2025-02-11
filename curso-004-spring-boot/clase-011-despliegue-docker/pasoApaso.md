@@ -10,6 +10,11 @@
    - Sino OK o Siguiente.
 5. ✅ Una vez instalado, reinicia tu computadora si es necesario.
 6. 🚦 Abre Docker Desktop y verifica que está corriendo correctamente.
+7. Ir a Administrador de Tareas: clic derecho en la barra inferior, Administrador de Tareas -> Rendimiento.
+8. 🚦 Debe estar habilitada la virtualización.
+
+![Logo de Google](https://support.bluestacks.com/hc/article_attachments/29499674569485)
+
 
 ## 2️⃣ Verificar la Instalación
 
@@ -23,11 +28,19 @@ Si ves una versión de Docker impresa en la terminal, significa que la instalaci
 
 ---
 
+
+## 3️⃣ Iniciar Docker Desktop
+
+9. Abrir Docker Desktop- > Skip sin registrarse.
+10. What's your role? Cual es tu Rol? -> Desarrollador Back End.
+11. What will you use Docker for? Para que usaras Docker? -> Local development
+
+
 ## 🚀 Desplegar una Aplicación Spring Boot con Docker
 
-### 1️⃣ Crear un `Dockerfile` 📄
+### 4️⃣ Crear un `Dockerfile` con IntelliJ 📄
 
-Dentro del proyecto de Spring Boot, crea un archivo llamado **`Dockerfile`** en la raíz del proyecto con el siguiente contenido:
+Dentro del proyecto de Spring Boot, crea un archivo llamado **`Dockerfile`** en la raíz del proyecto con el siguiente contenido: SI nos dice que si quieres intalar el plugins le damos OK.
 
 ```dockerfile
 # Usar una imagen base de OpenJDK
@@ -37,7 +50,8 @@ FROM openjdk:17-jdk-slim
 WORKDIR /app
 
 # Copiar el archivo JAR generado en el contenedor
-COPY target/mi-aplicacion.jar app.jar
+COPY target/mi-aplicacion.jar app.jar - probando
+COPY target/mi-aplicacion.jar
 
 # Exponer el puerto en el que corre la aplicación
 EXPOSE 8080
@@ -48,13 +62,11 @@ CMD ["java", "-jar", "app.jar"]
 
 ### 2️⃣ Construir la Imagen Docker 🛠️
 
-Ejecuta el siguiente comando en la terminal dentro del directorio del proyecto:
+1. Primero asegurate que tienes tu JDK Java 17. File > Project Structure > Project > JDK = 17.
 
-```sh
-docker build -t mi-aplicacion .
-```
+2. Debes ir al apartado de maven al costado derecho. y ejecutar la opcion que dice (M app).
 
-Este comando crea una imagen de Docker con el nombre `mi-aplicacion`. 🏗️
+3. Este comando crea una imagen de Docker con el nombre `mi-aplicacion`. 🏗️
 
 ### 3️⃣ Ejecutar el Contenedor 🏃‍♂️
 

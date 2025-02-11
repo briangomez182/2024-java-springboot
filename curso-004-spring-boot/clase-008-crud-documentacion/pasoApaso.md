@@ -57,8 +57,14 @@ Por defecto, Swagger UI está disponible en `http://localhost:8080/swagger-ui/`.
 ### Usando `application.properties`
 
 ```properties
+
+# habilitar o no api-docs y swagger-ui
+springdoc.api-docs.enabled = true
+springdoc.swagger-ui.enabled = true
+
 # url o ruta de swagger-ui
 springdoc.swagger-ui.path=/doc
+
 ```
 ---
 

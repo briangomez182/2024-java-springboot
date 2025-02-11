@@ -1,8 +1,6 @@
 package com.hackaboss.app.controllers;
 
-import org.springframework.web.bind.annotation.GetMapping;
-import org.springframework.web.bind.annotation.RequestMapping;
-import org.springframework.web.bind.annotation.RestController;
+import org.springframework.web.bind.annotation.*;
 
 @RestController
 @RequestMapping("/pruebasecurity")
@@ -15,6 +13,11 @@ public class HolaController {
 
     @GetMapping("/holanoseg")
     public String holaMundoNoSeguro() {
+        return "Hola mundo sin seguridad";
+    }
+
+    @PostMapping("/post")
+    public String holaMundoSeguroPost() {
         return "Hola mundo sin seguridad";
     }
 }
