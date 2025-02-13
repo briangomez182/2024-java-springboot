@@ -26,4 +26,7 @@ public class TemaDTO {
     @JsonBackReference
     @JsonProperty("cursoId")
     private CursoDTO idCurso;
+
+    @JsonProperty("curso")
+    private String cursoNombre;
 }

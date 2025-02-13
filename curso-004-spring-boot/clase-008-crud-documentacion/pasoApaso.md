@@ -9,14 +9,14 @@ Este tutorial paso a paso te guiará para agregar Swagger UI a tu aplicación Sp
 En tu archivo `pom.xml`, añade las siguientes dependencias para integrar Swagger:
 
 ```xml
-<dependencies>
+
     <!-- Dependencia para Swagger -->
     <dependency>
 			<groupId>org.springdoc</groupId>
 			<artifactId>springdoc-openapi-starter-webmvc-ui</artifactId>
 			<version>2.3.0</version>
-		</dependency>
-</dependencies>
+	</dependency>
+
 ```
 
 Luego, asegúrate de sincronizar tu proyecto para descargar las dependencias con el icono de recargar el maven.

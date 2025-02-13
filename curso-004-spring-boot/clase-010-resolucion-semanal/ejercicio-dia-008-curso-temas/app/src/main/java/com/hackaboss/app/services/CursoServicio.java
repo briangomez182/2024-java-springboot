@@ -43,9 +43,9 @@ public class CursoServicio implements CursoServicioInterfaz{
 
     @Override
     public CursoDTO crear(CursoDTO entidad) {
-        Curso cursoConvertido = this.convertirHaciaEntidad(entidad);
-        Curso cursoGuardado =  repository.save(cursoConvertido);
-        return this.convertirHaciaDTO(cursoGuardado);
+          Curso cursoConvertido = this.convertirHaciaEntidad(entidad);
+          repository.save(cursoConvertido);
+          return this.convertirHaciaDTO(cursoConvertido);
     }
 
     @Override
@@ -79,8 +79,20 @@ public class CursoServicio implements CursoServicioInterfaz{
             temaDTO = null;
             return null;
         }else{
-            List<TemaDTO> susTemasDTO = curso.getTemas().stream().map(tema -> new TemaDTO(tema.getIdTema(), tema.getNombre(), tema.getDescripccion(), null)).toList();
+            List<TemaDTO> susTemasDTO = curso.getTemas().stream().map(tema -> new TemaDTO(tema.getIdTema(), tema.getNombre(), tema.getDescripccion(), null, tema.getCurso().getNombre())).toList();
+
+            CursoDTO cursoDTO = new CursoDTO();
+            cursoDTO.setIdentificador(curso.getIdCurso());
+            cursoDTO.setNombre(curso.getNombre());
+            cursoDTO.setTipoCurso(curso.getTipoCurso());
+            cursoDTO.setFechaFinalizacion(curso.getFechaFinalizacion());
+            cursoDTO.setTemas(susTemasDTO);
+
+            return cursoDTO;
+
+/*
             return new CursoDTO(curso.getIdCurso(), curso.getNombre(), curso.getTipoCurso(), curso.getFechaFinalizacion(), susTemasDTO);
+*/
         }
 
 

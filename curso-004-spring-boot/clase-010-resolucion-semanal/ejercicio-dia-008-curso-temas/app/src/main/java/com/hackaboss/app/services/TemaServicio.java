@@ -65,10 +65,12 @@ public class TemaServicio implements TemaServicioInterfaz{
 
         if (tema.getCurso().getTemas() == null) {
             cursoDTO =  new CursoDTO(tema.getCurso().getIdCurso(), null,null,null, null);
-            return new TemaDTO(tema.getIdTema(),tema.getNombre(),tema.getDescripccion(), cursoDTO);
+            return new TemaDTO(tema.getIdTema(),tema.getNombre(),tema.getDescripccion(), cursoDTO, tema.getCurso().getIdCurso().toString());
+            //le ponemos to string cuando estoy guardando un tema la respuesta me viene en null cuando hago un save,
+            // pero cuando hago un find si me trae la relacion
         }else {
             cursoDTO =  new CursoDTO(tema.getCurso().getIdCurso(), tema.getCurso().getNombre(),tema.getCurso().getTipoCurso(),tema.getCurso().getFechaFinalizacion(), null);
-            return new TemaDTO(tema.getIdTema(),tema.getNombre(),tema.getDescripccion(), cursoDTO);
+            return new TemaDTO(tema.getIdTema(),tema.getNombre(),tema.getDescripccion(), cursoDTO, tema.getCurso().getNombre());
         }
 
     }

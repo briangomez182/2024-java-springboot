@@ -18,6 +18,6 @@ public class HolaController {
 
     @PostMapping("/post")
     public String holaMundoSeguroPost() {
-        return "Hola mundo sin seguridad";
+        return "Hola mundo con seguridad desde POST";
     }
 }
